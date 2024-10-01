@@ -6,9 +6,12 @@ st.title("Price Variation Calculator")
 # User input for the initial price
 initial_price = st.number_input("Enter the current price:", value=5.37, format="%.2f")
 
-# Define a fixed tolerance value of 0.005
+# User input for the target price
+target_price = st.number_input("Enter the target price:", value=5.37, format="%.2f")
+
+# Define a fixed tolerance value of 0.005 around the target price
 tolerance_value = 0.005
-tolerance_range = (initial_price - tolerance_value, initial_price + tolerance_value)
+tolerance_range = (target_price - tolerance_value, target_price + tolerance_value)
 
 # Display tolerance range
 st.write(f"Tolerance range: {tolerance_range[0]:.4f} - {tolerance_range[1]:.4f}")
